@@ -1,0 +1,19 @@
+.slider {
+  transform-style: preserve-3d;
+  transform: perspective(100vw);
+  animation: spin 20s linear infinite;
+}
+
+.card-container {
+  transform: rotateY(calc(var(--index) * (360deg / 10))) translateZ(40vw)
+}
+
+@keyframes spin {
+  from {
+    transform: perspective(100vw) rotateX(-15deg) rotateY(0deg)
+  }
+
+  to {
+    transform: perspective(100vw) rotateX(-15deg) rotateY(360deg)
+  }
+}

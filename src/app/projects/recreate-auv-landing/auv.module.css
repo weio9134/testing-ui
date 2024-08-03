@@ -1,0 +1,24 @@
+.window {
+  animation: shrink 2s ease-in 0.5s forwards;
+}
+
+@keyframes shrink {
+  from {
+    width: 100vw;
+  }
+
+  to {
+    width: 50vw;
+  }
+}
+
+.header-text {
+  color: transparent;
+  font-weight: 900;
+  -webkit-text-stroke: 3px white;
+}
+
+.behind-text {
+  color: white;
+  font-weight: 900;
+}
