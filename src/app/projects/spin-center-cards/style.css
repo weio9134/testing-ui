@@ -1,0 +1,28 @@
+.slider {
+  transform-style: preserve-3d;
+  transform: perspective(100vw);
+  animation: rotateCardY 20s linear infinite;
+  
+  min-width: 65px;
+  max-width: 160px;
+  width: 15vw;
+
+  min-height: 100px;
+  max-height: 250px;
+  height: 24vw;
+}
+
+/* w-[15vw] h-[24vw] */
+@keyframes rotateCardY {
+  from {
+    transform: perspective(100vw) rotateX(-15deg) rotateY(0deg)
+  }
+
+  to {
+    transform: perspective(100vw) rotateX(-15deg) rotateY(360deg)
+  }
+}
+
+.card-container {
+  transform: rotateY(calc(var(--index) * (360deg / 10))) translateZ(40vw);
+}

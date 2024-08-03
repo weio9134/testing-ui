@@ -7,6 +7,7 @@ export default function Home() {
       <GoTo url={'projects/3d-spinning-slides'} text={'3D Spinnning Slide'}/>
       <GoTo url={'projects/recreate-auv-landing'} text={'Recreate AUV Landing'}/>
       <GoTo url={'projects/sliding-bgs'} text={'Sliding Backgrounds'}/>
+      <GoTo url={'projects/spin-center-cards'} text={'Spinning Centered Cards'}/>
     </main>
   );
 }
