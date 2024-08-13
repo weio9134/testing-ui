@@ -1,40 +1,38 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import gsap from "gsap";
+import React, { useState } from "react";
 import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import "./laptop.css";
 
 const page = () => {
   const [hidden, setHidden] = useState(true);
 
-  useEffect(() => {
+  useGSAP(() => {
     setHidden(false);
+    gsap.registerPlugin(ScrollTrigger);
 
-    const context = gsap.context(() => {
-      gsap
-        .timeline()
-        .from("#header", {
-          autoAlpha: 0,
-          x: "-100%",
-          duration: 0.5,
-          delay: 0.5,
-        })
-        .from(".pot, .table, #laptop", {
-          scale: 0,
-          transformOrigin: "50% 50%",
-          duration: 0.5,
-        })
-        .from(".stem, .pen", { scale: 0, duration: 0.5 })
-        .from(".pleaf", { scale: 0, transformOrigin: "start", duration: 0.5 })
-        .to("#laptop-screen", { rotateX: "0deg", ease: "none" });
-    });
-
-    return () => context.revert();
+    gsap
+      .timeline()
+      .from("#header", {
+        autoAlpha: 0,
+        x: "-100%",
+        duration: 0.5,
+        delay: 0.5,
+      })
+      .from(".pot, .table, #laptop", {
+        scale: 0,
+        transformOrigin: "50% 50%",
+        duration: 0.5,
+      })
+      .from(".stem, .pen", { scale: 0, duration: 0.5 })
+      .from(".pleaf", { scale: 0, transformOrigin: "start", duration: 0.5 })
+      .to("#laptop-screen", { rotateX: "0deg", ease: "none" });
   }, []);
 
   return (
-    <div className={`p-[5%] h-screen flex-col ${hidden && "hidden"}`}>
+    <section className={`p-[5%] h-screen flex-col ${hidden && "hidden"}`}>
       <div
         className="absolute text-[4rem] md:text-[6rem] font-extrabold"
         id="header"
@@ -231,7 +229,7 @@ const page = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
