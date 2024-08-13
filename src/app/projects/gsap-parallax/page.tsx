@@ -20,7 +20,7 @@ const page = () => {
       scrub: 3,
     });
 
-    gsap.to(".header", {
+    gsap.from(".header", {
       autoAlpha: 0,
       x: "-100%",
       duration: 0.5,
@@ -106,7 +106,7 @@ const page = () => {
     ScrollTrigger.create({
       animation: scene2,
       trigger: ".scrollElement",
-      start: "15% top",
+      start: "top top",
       end: "40% 100%",
       scrub: 4,
     });
@@ -792,7 +792,19 @@ const page = () => {
         </g>
       </svg>
 
-      <div className="scrollElement"></div>
+      <div className="scrollElement" />
+
+      <div className="flex flex-col z-[999]">
+        <div className="header w-screen h-screen text">
+          <div className="w-full h-full top-1/2">Header</div>
+        </div>
+        <div className="about w-screen h-screen text">About</div>
+        <div className="project w-screen h-screen text">Project</div>
+        <div className="w-screen h-screen" />
+        <div className="w-screen h-screen" />
+        <div className="w-screen h-screen" />
+        <div className="contact w-screen h-screen text">Contact</div>
+      </div>
     </section>
   );
 };
