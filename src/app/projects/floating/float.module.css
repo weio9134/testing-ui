@@ -1,0 +1,92 @@
+.float {
+  animation: floating 3s linear infinite;
+}
+
+.bob {
+  animation: bobbing 4s linear infinite;
+}
+
+@keyframes floating {
+  from {
+    transform: rotate(0deg) translateY(-10px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateY(-10px) rotate(-360deg);
+  }
+}
+
+@keyframes bobbing {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 8vw));
+  grid-template-rows: repeat(10, minmax(0, 8vw));
+  grid-template-areas:
+    "c1 c1 c1 . br br br . bb bb"
+    ". . . . . . . . . ."
+    ". amz amz amz . ap . pt pt pt"
+    ". . . . . . . . . ."
+    ". . jpm jpm jpm . . go go ."
+    ". . . . . . . . . ."
+    ". js js . sg sg . mt mt mt"
+    ". js js . sg sg . mt mt mt"
+    ". . . . . . . . . ."
+    ". . sx sx sx . . rp rp .";
+}
+
+.c1 {
+  grid-area: c1;
+  animation: floating 3s linear infinite;
+}
+.apple {
+  grid-area: ap;
+  animation: bobbing 4s linear infinite;
+}
+.blackrock {
+  grid-area: br;
+  animation: floating 3s linear infinite;
+}
+.amazon {
+  grid-area: amz;
+}
+.palantir {
+  grid-area: pt;
+}
+.bloomberg {
+  grid-area: bb;
+}
+.jpm {
+  grid-area: jpm;
+  animation: bobbing 4s linear infinite;
+}
+.jstreet {
+  grid-area: js;
+  animation: floating 3s linear infinite;
+}
+.google {
+  grid-area: go;
+  animation: floating 3s linear infinite;
+}
+.sigma {
+  grid-area: sg;
+  animation: bobbing 4s linear infinite;
+}
+.spacex {
+  grid-area: sx;
+  animation: floating 3s linear infinite;
+}
+.moto {
+  grid-area: mt;
+}
+.ramp {
+  grid-area: rp;
+  animation: bobbing 4s linear infinite;
+}

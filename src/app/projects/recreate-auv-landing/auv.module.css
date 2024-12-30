@@ -1,5 +1,5 @@
 .window {
-  animation: shrink 2s ease-in 0.5s forwards;
+  animation: shrink 2s ease-out 0.5s forwards;
 }
 
 @keyframes shrink {

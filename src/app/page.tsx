@@ -12,6 +12,7 @@ export default function Home() {
       <GoTo url={"projects/laptop-animation"} text={"Laptop Animation"} />
       <GoTo url={"projects/gsap-parallax"} text={"GSAP Parallax"} />
       <GoTo url={"projects/spring-intro"} text={"Intro to Spring"} />
+      <GoTo url={"projects/floating"} text={"Floating"} />
     </main>
   );
 }
