@@ -1,0 +1,13 @@
+.card {
+  width: 250px;
+  position: absolute;
+  left: 100%;
+  animation: run 10s linear infinite;
+  animation-delay: calc(-1s * var(--index));
+}
+
+@keyframes run {
+  to {
+    left: -250px;
+  }
+}

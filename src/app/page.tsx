@@ -13,6 +13,8 @@ export default function Home() {
       <GoTo url={"projects/gsap-parallax"} text={"GSAP Parallax"} />
       <GoTo url={"projects/spring-intro"} text={"Intro to Spring"} />
       <GoTo url={"projects/floating"} text={"Floating"} />
+      <GoTo url={"projects/stacked-cards"} text={"Stacked Card"} />
+      <GoTo url={"projects/line-carousel"} text={"Line Carousel"} />
     </main>
   );
 }

@@ -1,0 +1,43 @@
+:root {
+  --cards: 4;
+  --cardHeight: 75vh;
+  --cardTopPad: 5vw;
+}
+
+.container {
+  list-style: none;
+  margin: auto auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: min(80vw, 800px);
+  grid-template-rows: repeat(var(--cards), var(--cardHeight));
+  padding-bottom: calc(var(--cards) * var(--cardTopPad));
+  margin-bottom: 5vw;
+}
+
+#card1 .card-body {
+  background-color: aqua;
+}
+#card2 .card-body {
+  background-color: bisque;
+}
+#card3 .card-body {
+  background-color: cadetblue;
+}
+#card4 .card-body {
+  background-color: violet;
+}
+
+.card {
+  position: sticky;
+  top: 0;
+  padding-top: calc(var(--index) * var(--cardTopPad));
+}
+
+.card-body {
+  border-radius: 50px;
+  height: var(--cardHeight);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
